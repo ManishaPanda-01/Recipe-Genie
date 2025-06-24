@@ -1,0 +1,190 @@
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 1rem;
+}
+
+.register-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 100%;
+  max-width: 450px;
+  animation: cardAppear 0.5s ease-out;
+}
+
+.form-header {
+  background: linear-gradient(to right, #2ecc71, #27ae60);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.register-form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.field-icon {
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #2ecc71;
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.1);
+  background-color: white;
+}
+
+.form-input::placeholder {
+  color: #a0aec0;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(46, 204, 113, 0.2);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.login-link a {
+  color: #2ecc71;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.25rem;
+  transition: color 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #27ae60;
+  text-decoration: underline;
+}
+
+/* Animation */
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .register-card {
+    max-width: 90%;
+    margin: 2rem auto;
+  }
+  
+  .register-form {
+    padding: 1.5rem;
+  }
+  
+  .form-header {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    border-radius: 12px;
+  }
+
+  .register-form {
+    padding: 1.25rem;
+  }
+
+  .form-header {
+    padding: 1rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .form-input {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .login-link {
+    font-size: 0.9rem;
+  }
+}

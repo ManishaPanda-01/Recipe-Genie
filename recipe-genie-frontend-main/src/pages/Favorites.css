@@ -1,0 +1,124 @@
+.favorites-container {
+  min-height: 100vh;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, var(--color-gradient-start) 0%, var(--color-gradient-end) 100%);
+}
+
+.favorites-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.favorites-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.favorites-subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.favorites-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.favorite-item {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-secondary);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px var(--color-shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.favorite-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px var(--color-shadow);
+}
+
+.remove-favorite-button {
+  background-color: var(--color-error);
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  margin: 0.5rem 1rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.remove-favorite-button:hover {
+  background-color: #c0392b;
+}
+
+.no-favorites {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: var(--color-bg-secondary);
+  border-radius: 15px;
+  box-shadow: 0 4px 6px var(--color-shadow);
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text-secondary);
+}
+
+.browse-recipes-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.browse-recipes-link:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+.error-message {
+  color: var(--color-error);
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .favorites-title {
+    font-size: 2rem;
+  }
+  
+  .favorites-grid {
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .favorites-title {
+    font-size: 1.75rem;
+  }
+  
+  .favorites-grid {
+    grid-template-columns: 1fr;
+  }
+}

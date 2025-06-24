@@ -1,0 +1,229 @@
+.add-recipe-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  padding: 2rem 1rem;
+}
+
+.recipe-form-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.form-header {
+  background: linear-gradient(to right, #3498db, #2980b9);
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.form-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.form-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.recipe-form {
+  padding: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background-color: #f8fafc;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  background-color: white;
+}
+
+.form-textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.image-upload-area {
+  border: 2px dashed #e2e8f0;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.image-upload-area:hover {
+  border-color: #3498db;
+  background-color: #f8fafc;
+}
+
+.file-input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+  width: 0;
+}
+
+.file-input::before {
+  content: 'Choose Image';
+  display: inline-block;
+  background: #3498db;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-input:hover::before {
+  background: #2980b9;
+}
+
+.image-preview {
+  margin-top: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 1rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.submit-button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.submit-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-recipe-container {
+    padding: 1rem;
+  }
+
+  .recipe-form-wrapper {
+    max-width: 95%;
+  }
+
+  .form-header {
+    padding: 1.5rem;
+  }
+
+  .form-title {
+    font-size: 2rem;
+  }
+  
+  .form-subtitle {
+    font-size: 1rem;
+  }
+
+  .recipe-form {
+    padding: 1.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+  
+  .image-upload-area {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-header {
+    padding: 1.25rem;
+  }
+  
+  .form-title {
+    font-size: 1.75rem;
+  }
+  
+  .form-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .recipe-form {
+    padding: 1.25rem;
+  }
+  
+  .form-input, 
+  .form-textarea {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+  
+  .submit-button {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+}
+
+/* Animation */
+@keyframes formAppear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.recipe-form-wrapper {
+  animation: formAppear 0.4s ease-out;
+}
